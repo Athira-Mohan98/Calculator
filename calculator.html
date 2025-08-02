@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tailwind Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center mt-10">
+
+  <div class="bg-white p-6 rounded-3xl shadow-2xl">
+    <div class="text-right mb-4">
+      <input type="text" id="result"placeholder="0" class="w-full text-3xl text-gray-800 bg-gray-100 p-3 rounded-xl text-right font-mono shadow-inner" />
+    </div>
+
+    <div class="grid grid-cols-4 gap-3 mb-3">
+      <button class="col-span-2 bg-red-400 hover:bg-red-500 text-white py-2 rounded-xl"id="ac" onclick="clearScreen()">AC</button>
+       <button class="bg-blue-400 hover:bg-blue-500 text-white py-2 rounded-xl"id="div"onclick="displayNumber('/')">/</button>
+      <button class="bg-blue-400 hover:bg-blue-500 text-white py-2 rounded-xl"id="del"onclick="RemoveNumber()">Del</button>
+    </div>
+    <div class="grid grid-cols-4 gap-3">
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl" id="seven"onclick="displayNumber(7)">7</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="eight"onclick="displayNumber(8)">8</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="nine"onclick="displayNumber(9)">9</button>
+      <button class="bg-blue-400 hover:bg-blue-500 text-white py-3 rounded-xl"id="mul"onclick="displayNumber('*')">*</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="four"onclick="displayNumber(4)">4</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="five"onclick="displayNumber(5)">5</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="six"onclick="displayNumber(6)">6</button>
+      <button class="bg-blue-400 hover:bg-blue-500 text-white py-3 rounded-xl" id="sub"onclick="displayNumber('-')">−</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="one"onclick="displayNumber(1)">1</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="two"onclick="displayNumber(2)">2</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="three"onclick="displayNumber(3)">3</button>
+      <button class="bg-blue-400 hover:bg-blue-500 text-white py-3 rounded-xl" id="add"onclick="displayNumber('+')">+</button>
+      <button class="col-span-2 bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"id="zero"onclick="displayNumber(0)">0</button>
+      <button class="bg-gray-200 hover:bg-gray-300 py-3 rounded-xl"onclick="displayNumber()">.</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white py-3 rounded-xl" id="equal"onclick="operation()">=</button>
+    </div>
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
